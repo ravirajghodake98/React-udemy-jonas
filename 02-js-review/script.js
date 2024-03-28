@@ -178,3 +178,13 @@ const updatedBook = {
   pages: 1210,
 };
 updatedBook;
+
+const summary = `${title} is a book by ${author} and published in ${
+  publicationDate.split("-")[0]
+} with ${pages} pages. The book has ${
+  hasMovieAdaptation ? "" : "not"
+} been adapted as a movie.`;
+summary;
+
+const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
+pagesRange;
