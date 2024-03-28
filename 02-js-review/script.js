@@ -179,8 +179,19 @@ const updatedBook = {
 };
 updatedBook;
 
+//Arrow functions
+//FUNCTION DECLARATION
+// function getYear(str) {
+//   return str.split("-")[0];    //important to write 'return' keyword in function block
+// }
+
+//FUNCTION EXPRESSION
+const getYear = (str) => str.split("-")[0];
+console.log(getYear(publicationDate));
+
 const summary = `${title} is a book by ${author} and published in ${
-  publicationDate.split("-")[0]
+  // publicationDate.split("-")[0]
+  getYear(publicationDate)
 } with ${pages} pages. The book has ${
   hasMovieAdaptation ? "" : "not"
 } been adapted as a movie.`;
