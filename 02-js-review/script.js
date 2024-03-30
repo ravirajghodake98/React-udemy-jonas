@@ -199,3 +199,18 @@ summary;
 
 const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
 pagesRange;
+
+console.log(true && "some string");
+console.log(false && "some string");
+
+//falsy values: 0,  null, undefined, false, NaN, ""
+console.log("raviraj" && "some string");
+console.log(0 && "some string");
+
+console.log(book.reviews.librarything.reviewsCount);
+const countWrong = book.reviews.librarything.reviewsCount || "no data";
+countWrong; //no data
+
+//nullish coalescing operator- ??
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+count; //0
