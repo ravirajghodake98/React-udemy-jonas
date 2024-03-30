@@ -252,3 +252,14 @@ adventureBooks;
 //REDUCE METHOD
 const pagesOfAllBooks = books.reduce((sum, book) => sum + book.pages, 0);
 pagesOfAllBooks;
+
+//SORT METHOD - mutates or changes the original array
+const arr = [8, 3, 5, 1, 9];
+const sorted = arr.sort((a, b) => a - b);
+const sorted1 = arr.slice().sort((a, b) => a - b); //slice method will make the copy of a array and sort it out without changing the actual one
+sorted;
+sorted1;
+arr;
+
+const sortedByPages = books.slice().sort((a, b) => a.pages - b.pages);
+sortedByPages;
