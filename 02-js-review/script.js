@@ -145,6 +145,7 @@ function getBook(id) {
 
 //Destructuring
 
+/*
 // const book = getBooks();
 // book;
 
@@ -214,3 +215,25 @@ countWrong; //no data
 //nullish coalescing operator- ??
 const count = book.reviews.librarything.reviewsCount ?? "no data";
 count; //0
+*/
+
+//MAP METHOD
+function getTotalReviewCount(book) {
+  const goodreads = book.reviews?.goodreads?.reviewsCount;
+  const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+  librarything;
+  return goodreads + librarything;
+}
+
+const books = getBooks();
+books;
+
+const titles = books.map((book) => book.title);
+titles;
+
+const essentialData = books.map((book) => ({
+  title: book.title,
+  author: book.author,
+  reviewsCount: getTotalReviewCount(book),
+}));
+essentialData;
