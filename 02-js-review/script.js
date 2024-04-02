@@ -217,6 +217,7 @@ const count = book.reviews.librarything.reviewsCount ?? "no data";
 count; //0
 */
 
+/*
 //MAP METHOD
 function getTotalReviewCount(book) {
   const goodreads = book.reviews?.goodreads?.reviewsCount;
@@ -284,3 +285,24 @@ const booksAfterUpdate = booksAfterDelete.map((book) =>
   book.id === 6 ? { ...book, pages: 475 } : book
 );
 booksAfterUpdate;
+*/
+
+// PROMISE METHOD
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((response) => response.json()) // Parse JSON data coming from server
+  .then((todo) => console.log(todo)); // Print data in console
+
+console.log("starlord");
+
+// ASYNC-AWAIT METHOD
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  console.log(data);
+
+  return data;
+}
+
+const todos = getTodos();
+console.log(todos);
+console.log("starlord");
